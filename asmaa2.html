@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmaa</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            text-align: center;
+            position: relative;
+            padding-top: 250px; /* إضافة المسافة الفارغة في الأعلى */
+        }
+        h1 {
+            font-size: 4rem;
+            color: #bb86fc;
+            text-shadow: 3px 3px 6px #333;
+            font-family: 'Amiri', serif;
+            border: 3px solid #bb86fc;
+            padding: 20px 40px;
+            border-radius: 20px;
+            background-color: #1f1f1f;
+            display: inline-block;
+            letter-spacing: 3px;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        hr {
+            width: 50%;
+            border: 1px solid #bb86fc;
+            margin: 20px 0;
+        }
+        .heart {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 2rem;
+            color: red;
+        }
+        .read-more-btn {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #bb86fc;
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+        .read-more-btn:hover {
+            background-color: #9a66d4;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 15px;
+            width: 70%;
+            text-align: center;
+            z-index: 1000;
+        }
+        .popup-content {
+            background-color: #1e90ff;
+            padding: 10px;
+            font-size: 1.5rem;
+            color: #000000;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            direction: rtl;
+        }
+        .celebration {
+            font-size: 3rem;
+            color: #ff7f7f;
+            margin-bottom: 20px;
+        }
+        .close-btn {
+            padding: 10px 20px;
+            background-color: #ff7f7f;
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        .close-btn:hover {
+            background-color: #ff4f4f;
+        }
+        .footer-text {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+        .footer-heart {
+            color: red;
+        }
+        .translate-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #ff9900;
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        .translate-btn:hover {
+            background-color: #cc7a00;
+        }
+
+        /* Responsive Design */
+        /* Adjust font size and layout for different devices */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+                padding: 15px 30px;
+            }
+            p {
+                font-size: 1rem;
+                margin-top: 15px;
+            }
+            .read-more-btn {
+                padding: 8px 15px;
+                font-size: 1rem;
+            }
+            .translate-btn {
+                padding: 8px 15px;
+                font-size: 1rem;
+            }
+            .popup-content {
+                font-size: 1.2rem;
+            }
+            .popup {
+                width: 80%;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+                padding: 10px 20px;
+            }
+            p {
+                font-size: 0.9rem;
+                margin-top: 10px;
+            }
+            .read-more-btn {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+            .translate-btn {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+            .popup-content {
+                font-size: 1rem;
+            }
+            .popup {
+                width: 90%;
+                padding: 10px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cairo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="heart">❤</div>
+  <h3> I love you asmaa</h3>
+    <h1 id="site-title">✿ 𝐴𝑠𝑚𝑎𝑎 ✿</h1>
+    <p id="para1">
+        1. You are the sister I never had, a light that brightens my darkest days.<br>
+        2. Your laughter is a melody that soothes my heart and lifts my spirit.<br>
+        3. In every moment, your kindness shows me the true meaning of love.<br>
+        4. I am grateful for your presence, a bond unbreakable and pure.<br>
+        5. With you, life feels complete, as if fate gave me a precious gift.
+    </p>
+    <hr>
+    <p id="para2">
+        1. Your words inspire me more than anything else ever could.<br>
+        2. Your smile is a treasure, making each day brighter.<br>
+        3. Every memory we create is a chapter of joy in my life.<br>
+        4. Your support means the world, a constant reminder that I am not alone.<br>
+        5. Life is better with you, a blessing beyond measure.
+    </p>
+    <hr>
+    <p id="para3">
+        1. You are my confidant, always ready to listen and understand.<br>
+        2. The bond we share is something I cherish deeply.<br>
+        3. Your laughter fills the room with warmth and happiness.<br>
+        4. You bring out the best in me, reminding me of my strength.<br>
+        5. Thank you for being you, an irreplaceable part of my heart.
+    </p>
+
+    <!-- Read More Button -->
+    <button class="read-more-btn" onclick="showPopup()">Read More</button>
+
+    <!-- Translate Button -->
+    <button class="translate-btn" onclick="translateText()">Translate</button>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="celebration">🎉🎉🎉</div>
+        <div class="popup-content">
+            <p id="popup-text">أنا أشكرك بشدة على دعمك لي خاصة هذه الفترة ولكي مني كل الاحترام والتقدير وأنا حقًا أحبك بشدة وانت أجمل شيء حدث لي في حياتي وأنا أعلم أن هذه الهدية لا تليق بك ولكن أعدك أنني سأقدم لك أشياءً كثيرة فيما بعد وأنا حقًا أحبك بشدة.</p>
+        </div>
+        <div class="footer-text">
+            Mazen love Asmaa <span class="footer-heart">❤️</span>
+        </div>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        let isArabic = false;
+
+        // Function to show the popup
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        // Function to translate text between English and Arabic
+        function translateText() {
+            if (isArabic) {
+                document.getElementById("site-title").innerText = "✿ 𝐴𝑠𝑚𝑎𝑎 ✿";
+                document.getElementById("para1").innerHTML = `
+                    1. You are the sister I never had, a light that brightens my darkest days.<br>
+                    2. Your laughter is a melody that soothes my heart and lifts my spirit.<br>
+                    3. In every moment, your kindness shows me the true meaning of love.<br>
+                    4. I am grateful for your presence, a bond unbreakable and pure.<br>
+                    5. With you, life feels complete, as if fate gave me a precious gift.
+                `;
+                document.getElementById("para2").innerHTML = `
+                    1. Your words inspire me more than anything else ever could.<br>
+                    2. Your smile is a treasure, making each day brighter.<br>
+                    3. Every memory we create is a chapter of joy in my life.<br>
+                    4. Your support means the world, a constant reminder that I am not alone.<br>
+                    5. Life is better with you, a blessing beyond measure.
+                `;
+                document.getElementById("para3").innerHTML = `
+                    1. You are my confidant, always ready to listen and understand.<br>
+                    2. The bond we share is something I cherish deeply.<br>
+                    3. Your laughter fills the room with warmth and happiness.<br>
+                    4. You bring out the best in me, reminding me of my strength.<br>
+                    5. Thank you for being you, an irreplaceable part of my heart.
+                `;
+            } else {
+                document.getElementById("site-title").innerText = "✿ 𝐴𝑠𝑚𝑎𝑎 ✿";
+                document.getElementById("para1").innerHTML = `
+                    1. أنت الأخت التي لم أكن أمتلكها، نور يضيء أيامي المظلمة.<br>
+                    2. ضحكتك لحن يهدئ قلبي ويرتقي بروحي.<br>
+                    3. في كل لحظة، تظهر طيبتك لي معنى الحب الحقيقي.<br>
+                    4. أنا ممتن لوجودك، رابطة لا تنكسر وطاهرة.<br>
+                    5. معك، الحياة تبدو مكتملة، كأن القدر منحني هدية ثمينة.
+                `;
+                document.getElementById("para2").innerHTML = `
+                    1. كلماتك تلهمني أكثر من أي شيء آخر يمكن أن يلهمني.<br>
+                    2. ابتسامتك هي كنز يجعل كل يوم أكثر إشراقًا.<br>
+                    3. كل ذكرى نخلقها هي فصل من الفرح في حياتي.<br>
+                    4. دعمك يعني العالم لي، تذكرة مستمرة بأنني لست وحدي.<br>
+                    5. الحياة أفضل معك، نعمة بلا قياس.
+                `;
+                document.getElementById("para3").innerHTML = `
+                    1. أنت مستمعي، دائمًا جاهز للاستماع والفهم.<br>
+                    2. الرابطة التي نشاركها هي شيء أعتز به بشدة.<br>
+                    3. ضحكتك تملأ الغرفة بالدفء والسعادة.<br>
+                    4. أنت تخرج الأفضل فيّ، تذكرني بقوتي.<br>
+                    5. شكرًا لك لكونك أنت، جزء لا يمكن استبداله من قلبي.
+                `;
+            }
+            isArabic = !isArabic;
+        }
+    </script>
+</body>
+</html>
